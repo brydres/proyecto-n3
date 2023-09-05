@@ -5,7 +5,6 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-
     $loginquery = "Select correo, contra, nombre, apellidos, rol_id, direccion, fecha_nacimiento, dni from 
     usuarios_login 
     LEFT join usuarios_datos on id_ud = datos_id where `correo` = '$email'";
@@ -13,17 +12,11 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     $result = $mysqli->query($loginquery);
 
     $row = $result->fetch_assoc();
-
-
     $hash = $row['contra'];
     if (password_verify($password, $hash)) {
-        // print_r($row);
-
         $_SESSION['user'] = $row;
-
         header("location: index.php");
     }
-
 }
 ?>
 
@@ -36,10 +29,6 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     <link rel="stylesheet" href="/dist//output.css">
     <title>Login</title>
 </head>
-
-
-
-
 <body class="flex items-center justify-center  flex-col h-screen bg-amber-100">
 
     <div class="w-28 h-30">
@@ -51,7 +40,6 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         </h2>
         <form method="post" action="login.php">
             <div class="flex items-center gap-3 px-3 h-10 max-w-[360px] border rounded-md border-[#BDBDBD] mb-4">
-
                 <input type="text" name="email" id="email" placeholder="Email" class="h-9 w-full outline-none">
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
@@ -67,8 +55,6 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                         </defs>
                     </svg>
                 </span>
-
-
             </div>
             <div class="flex items-center gap-3 px-3 h-10 max-w-[360px] border rounded-md border-[#BDBDBD] mb-4">
                 <input type="password" name="password" id="password" placeholder="Password"
@@ -87,8 +73,6 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                         </defs>
                     </svg>
                 </span>
-
-
             </div>
             <div class="flex justify-end">
                 <button type="submit"
