@@ -1,7 +1,17 @@
 <?php
-try {
-    $mysqli = new mysqli("localhost", "root", "", "db_project_3");
-} catch (mysqli_sql_exception $e) {
-    echo "Error:" . $e->getMessage();
+
+$server = "localhost";
+$user = "root";
+$pass = "";
+$db = "db_project_3";
+
+$conexion = new mysqli($server, $user, $pass, $db);
+
+if ($conexion -> connect_errno) {
+    die ("conexion fallida" . $conexion->connect_errno);
+
+} else {
+    echo "conectado";
 }
+
 ?>
