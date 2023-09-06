@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 06-09-2023 a las 13:37:30
+-- Tiempo de generación: 06-09-2023 a las 14:49:00
 -- Versión del servidor: 8.0.31
 -- Versión de PHP: 8.2.0
 
@@ -75,8 +75,8 @@ CREATE TABLE IF NOT EXISTS `maestro_materia` (
 --
 
 INSERT INTO `maestro_materia` (`id_mm`, `maestro_id`, `materia_id`) VALUES
-(7, 20, 7),
-(8, 21, 7);
+(6, 24, 7),
+(7, 25, 7);
 
 -- --------------------------------------------------------
 
@@ -97,22 +97,21 @@ CREATE TABLE IF NOT EXISTS `materia` (
 --
 
 INSERT INTO `materia` (`id_materia`, `nombre_materia`) VALUES
-(16, 'Balances de Materia y Energía'),
-(9, 'Cinética Química'),
-(10, 'Diseño de Reactores Químicos'),
-(7, 'Fenómenos de Transporte'),
-(4, 'Fisicoquímica'),
-(11, 'Ingeniería de Procesos Químicos'),
-(1, 'Ingeniería de Seguridad'),
-(12, 'Ingeniería de Separaciones'),
-(13, 'Instrumentación y Control de Procesos'),
-(14, 'Laboratorio de Química'),
-(5, 'Matemáticas Aplicadas a la Ingeniería Química'),
-(8, 'Operaciones Unitarias'),
-(15, 'Química Analítica'),
-(2, 'Química Inorgánica'),
-(3, 'Química Orgánica'),
-(6, 'Termodinámica');
+(3, 'Balances de Materia y Energía'),
+(2, 'Cinética Química'),
+(15, 'Diseño de Reactores Químicos'),
+(8, 'Fenómenos de Transporte'),
+(5, 'Fisicoquímica'),
+(14, 'Ingeniería de Procesos Químicos'),
+(13, 'Ingeniería de Separaciones'),
+(12, 'Instrumentación y Control de Procesos'),
+(1, 'Laboratorio de Química'),
+(11, 'Matemáticas Aplicadas a la Ingeniería Química'),
+(4, 'Operaciones Unitarias'),
+(7, 'Química Analítica'),
+(10, 'Química Inorgánica'),
+(9, 'Química Orgánica'),
+(16, 'Termodinámica');
 
 -- --------------------------------------------------------
 
@@ -160,31 +159,31 @@ CREATE TABLE IF NOT EXISTS `usuarios_datos` (
 --
 
 INSERT INTO `usuarios_datos` (`id_ud`, `dni`, `nombre`, `apellidos`, `direccion`, `fecha_nacimiento`, `rol_id`) VALUES
-(1, 1120, 'Alvaro', 'Bayona', 'Colombia', '2001-10-10', 1),
-(2, 1121, 'Carlos', 'Viloria', 'Colombia', '2000-03-21', 3),
-(3, 1122, 'Jeffrey', 'Andrade', 'Colombia', '2001-04-20', 3),
-(4, 1123, 'Pedro', 'Perez', 'Colombia', '1998-09-12', 3),
-(5, 1124, 'Josue', 'Cabrales', 'Colombia', '2001-07-18', 3),
-(6, 1125, 'Mariana', 'Argon', 'Colombia', '2003-07-19', 2),
-(7, 1126, 'Elena', 'Orta', 'Colombia', '2002-03-17', 2),
-(8, 1127, 'Daniel', 'Briñez', 'Colombia', '2002-04-02', 2),
-(9, 1128, 'Daniela', 'Alvarez', 'Colombia', '2001-01-21', 2),
-(10, 1129, 'Maria', 'Mendoza', 'Colombia', '2001-11-22', 2),
-(11, 1130, 'Alejandro', 'Castro', 'Colombia', '2002-01-01', 2),
-(12, 1131, 'Santiago', 'Sierra', 'Colombia', '2002-10-30', 2),
-(13, 1132, 'Felipe', 'Peñaranda', 'Colombia', '2000-04-30', 2),
-(14, 1133, 'Rafael', 'de la Hoz', 'Colombia', '2000-11-05', 2),
-(15, 1134, 'Harold ', 'Araujo', 'Colombia', '2001-09-25', 2),
-(16, 1135, 'Esther ', 'Osorio', 'Colombia', '2002-02-15', 2),
-(17, 1136, 'Yajaira', 'Cuberos', 'Colombia', '2002-08-09', 2),
-(18, 1137, 'Windys', 'Chavez', 'Colombia', '1999-12-14', 2),
-(19, 1138, 'Angel', 'Barros', 'Colombia', '2003-06-21', 2),
-(20, 1139, 'Sebastian', 'Barros', 'Colombia', '2003-04-22', 2),
-(21, 1140, 'Jaime', 'Barrios', 'Colombia', '2002-02-03', 2),
-(22, 1141, 'Katherine', 'Del Duca', 'Colombia', '2001-12-03', 2),
-(23, 1142, 'Kamila', 'Rodriguez', 'Colombia', '2000-06-06', 3),
-(24, 1143, 'Gabriela', 'Santander', 'Colombia', '2001-02-22', 3),
-(25, 1144, 'admin', 'admin', 'Colombia', '1989-08-01', 1);
+(1, 0, 'Carlos', 'Perez', 'Bogotá', '2002-04-15', 1),
+(4, 15126383, 'Laura', 'Gomez', 'Medellin', '2001-07-22', 3),
+(5, 15587385, 'Andres', 'Rodriguez', 'Cali', '2000-11-10', 3),
+(6, 5588882, 'Maria', 'Lopez', 'Barranquilla', '2003-02-28', 3),
+(7, 13123408, 'Juan', 'Martinez', 'Cartagena', '2002-09-07', 3),
+(9, 0, 'Alejandro', 'Hernandez', 'Bucaramanga', '2001-05-14', 2),
+(10, 0, 'Daniela', 'Castro', 'Pereira', '2000-03-19', 2),
+(12, 0, 'Santiago', 'Diaz', 'Manizales', '2003-01-05', 2),
+(13, 0, 'Camila', 'Gonzalez', 'Cúcuta', '2002-06-12', 2),
+(14, 0, 'Isabella', 'Mendoza', 'Santa Marta', '2001-12-30', 2),
+(15, 0, 'Felipe', 'Ramirez', 'Ibague', '2000-08-18', 2),
+(17, 0, 'Valentina', 'Santos', 'Villavicencio', '2003-03-25', 2),
+(20, 0, 'Mateo', 'Perez', 'Pasto', '2002-10-09', 2),
+(22, 0, 'Laura', 'Gutierrez', 'Popayán', '2000-01-16', 2),
+(24, 0, 'Sofia', 'Fernandez', 'Neiva', '2001-06-28', 2),
+(25, 0, 'Daniel', 'Morales', 'Sincelejo', '2003-04-05', 2),
+(34, 0, 'Ana', 'Ortega', 'Tunja', '2002-07-13', 2),
+(35, 0, 'Raul', 'Silva', 'Armenia', '2001-09-20', 2),
+(36, 0, 'Carolina', 'Rojas', 'Cartagena', '2000-02-03', 2),
+(37, 0, 'Andrea', 'Fernandez', 'Barranquilla', '2003-05-11', 2),
+(38, 0, 'Luis', 'Castillo', 'Barranquilla', '2002-08-26', 2),
+(39, 0, 'Pedro', 'Garcia', 'Bogota', '2001-11-08', 2),
+(40, 15346213, 'Diego', 'Vargas', 'Medellin', '2000-04-17', 3),
+(41, 212321456, 'Javier', 'Mendez', 'Medellin', '2003-06-20', 3),
+(42, 15126408, 'Admin', 'Admin', 'Barranquilla', '2002-12-10', 1);
 
 -- --------------------------------------------------------
 
@@ -208,16 +207,16 @@ CREATE TABLE IF NOT EXISTS `usuarios_login` (
 --
 
 INSERT INTO `usuarios_login` (`id_ul`, `correo`, `contra`, `datos_id`) VALUES
-(1, 'admin@admin', '1234', 1),
-(3, 'bbarros@gmail.com', '$2y$10$WdvL2F5X5kmkTax/BzYM/.ajMQ35kkf/yFJLqVSHeyBmXBo0MpZr.', 9),
-(4, 'carlosc@gmail.com', '$2y$10$IjFUa9AoSFvJd/7C.iwuF..Lv1UrxATnZ28yDhtVbzd8GG5IpWdb.', 10),
-(6, 'kbarros963@gmail.com', '$2y$10$T4DStRu/PQhPbvAi.gYm4O9M6tGxuynzjY2LLfDl86AobOBg6ieEm', 12),
-(8, 'Elian@gmail.com', '$2y$10$10HqBEixafkndDeplk/rxOTI/WWAec/47gdZjkqBRCVfSi6LiUY2i', 14),
-(9, 'Arnulfob@gmail.com', '$2y$10$/USQBvJlV2LIhEiQ60CnU.YmLb77b7YITMh7I4GgwUK1kjO2YXUPu', 15),
-(12, 'Josepe@gmail.com', '$2y$10$LFfuaHeY1Cenzzbs3GG0fu2eTrQPMVrWPx5kcLWG9./ogfSqR9oRm', 20),
-(14, 'Haroldcu@gmail.com', '$2y$10$b2PRymYSK0vo595owLVFUOJNE7wkAkL9A8VSbdrTLe0ZMFg.0ItO.', 24),
-(25, 'admin@gmail.com', '$2y$10$JNtiGyCBnQfVKHulIlP5JOMCr26ZU8Oj6wwR2Qn1Hr/0W6f9MLWFS', 41),
-(26, 'admin@admin.net', '$2y$10$EwE7UePjeEpkj001s1x8zuaGnRrjKex.2TBbc1eXnNK/fOS09bSg.', 42);
+(1, 'admin@admin', 'admin', 1),
+(3, 'maestro@maestro', 'maestro', 9),
+(4, 'alumno@alumno', 'alumno', 10),
+(6, 'carlospd@funval.com', '$2y$10$T4DStRu/PQhPbvAi.gYm4O9M6tGxuynzjY2LLfDl86AobOBg6ieEm', 12),
+(8, 'funval@funval.com', '$2y$10$10HqBEixafkndDeplk/rxOTI/WWAec/47gdZjkqBRCVfSi6LiUY2i', 14),
+(9, 'barros@gmail.com', '$2y$10$/USQBvJlV2LIhEiQ60CnU.YmLb77b7YITMh7I4GgwUK1kjO2YXUPu', 15),
+(12, 'Jose@byu.com', '$2y$10$LFfuaHeY1Cenzzbs3GG0fu2eTrQPMVrWPx5kcLWG9./ogfSqR9oRm', 20),
+(14, 'Harold@Funval.com', '$2y$10$b2PRymYSK0vo595owLVFUOJNE7wkAkL9A8VSbdrTLe0ZMFg.0ItO.', 24),
+(25, 'admin@funval.com', '$2y$10$JNtiGyCBnQfVKHulIlP5JOMCr26ZU8Oj6wwR2Qn1Hr/0W6f9MLWFS', 41),
+(26, 'admin@admin.com', '$2y$10$EwE7UePjeEpkj001s1x8zuaGnRrjKex.2TBbc1eXnNK/fOS09bSg.', 42);
 
 --
 -- Restricciones para tablas volcadas
@@ -242,6 +241,12 @@ ALTER TABLE `maestro_materia`
 --
 ALTER TABLE `usuarios_datos`
   ADD CONSTRAINT `usuarios_datos_fk0` FOREIGN KEY (`rol_id`) REFERENCES `roles` (`id_rol`);
+
+--
+-- Filtros para la tabla `usuarios_login`
+--
+ALTER TABLE `usuarios_login`
+  ADD CONSTRAINT `usuarios_login_fk0` FOREIGN KEY (`datos_id`) REFERENCES `usuarios_datos` (`id_ud`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
