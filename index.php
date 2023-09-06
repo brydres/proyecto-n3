@@ -2,7 +2,6 @@
 
 session_start();
 
-
 if (isset($_SESSION['user'])) {
 
     switch ($_SESSION['user']['rol_id']) {
